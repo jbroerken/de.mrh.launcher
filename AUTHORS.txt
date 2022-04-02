@@ -1,0 +1,7 @@
+###
+#
+#  de.mrh.launcher Authors
+#
+###
+
+Jens Brörken <jens.broerken@gmail.com>

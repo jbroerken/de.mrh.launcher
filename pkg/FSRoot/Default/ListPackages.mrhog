@@ -1,0 +1,15 @@
+<MRHBF_1>
+
+####################
+#  Base Sentences  #
+####################
+
+<Sentence>{
+    <String><Which of the following actions should I perform:>
+    <Chance><0.8>
+}
+
+<Sentence>{
+    <String><I can perform the following actions:>
+    <Chance><0.6>
+}

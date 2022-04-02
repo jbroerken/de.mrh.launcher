@@ -1,0 +1,15 @@
+<MRHBF_1>
+
+####################
+#  Base Sentences  #
+####################
+
+<Sentence>{
+    <String><Ich habe keine passende Aktion für die Anfrage.>
+    <Chance><0.8>
+}
+
+<Sentence>{
+    <String><Ich kenne die gefragte Aktion nicht.>
+    <Chance><0.6>
+}
