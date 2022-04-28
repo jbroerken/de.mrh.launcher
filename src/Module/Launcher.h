@@ -177,7 +177,7 @@ private:
      *  \return The generated output.
      */
     
-    std::string NoPackagesOutput() noexcept;
+    std::string NoPackagesOutput();
     
     /**
      *  Generate package list output.
@@ -185,7 +185,7 @@ private:
      *  \return The generated output.
      */
     
-    std::string PackageListOutput() noexcept;
+    std::string PackageListOutput();
     
     //*************************************************************************************
     // Data

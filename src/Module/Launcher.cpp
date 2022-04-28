@@ -22,7 +22,6 @@
 // C / C++
 
 // External
-#include <libmrhab/Module/Common/MRH_CommonModule.h>
 #include <libmrhvt/Output/MRH_OutputGenerator.h>
 #include <libmrhvt/String/MRH_LocalisedPath.h>
 #include <libmrhvt/String/Compare/MRH_Levenshtein.h>
@@ -423,7 +422,7 @@ void Launcher::FilterPackageByName() noexcept
 // Output
 //*************************************************************************************
 
-std::string Launcher::NoPackagesOutput() noexcept
+std::string Launcher::NoPackagesOutput()
 {
     try
     {
@@ -432,11 +431,12 @@ std::string Launcher::NoPackagesOutput() noexcept
     }
     catch (std::exception& e)
     {
-        return "";
+        throw MRH_ModuleException("Launcher",
+                                  e.what());
     }
 }
 
-std::string Launcher::PackageListOutput() noexcept
+std::string Launcher::PackageListOutput()
 {
     try
     {
@@ -458,7 +458,7 @@ std::string Launcher::PackageListOutput() noexcept
     }
     catch (std::exception& e)
     {
-        throw MRH_ModuleException("PackageByInput",
+        throw MRH_ModuleException("Launcher",
                                   e.what());
     }
 }
