@@ -121,6 +121,8 @@ MRH_Module::Result Launcher::Update()
             if (s_Input.size() == 0)
             {
                 e_State = INPUT_LAUNCH_TRIGGER;
+                
+                return MRH_Module::FINISHED_APPEND; // Keep listening
             }
             
             // Select packages
@@ -148,6 +150,8 @@ MRH_Module::Result Launcher::Update()
             {
                 l_Selected.clear();
                 e_State = INPUT_LAUNCH_TRIGGER;
+                
+                return MRH_Module::FINISHED_APPEND;
             }
             
             // Select packages
