@@ -46,7 +46,7 @@ LaunchPackage::LaunchPackage(std::string const& s_PackagePath,
                                                   s_LaunchInput(s_LaunchInput),
                                                   s32_LaunchCommandID(s32_LaunchCommandID),
                                                   b_LaunchSet(b_LaunchSet),
-                                                  b_AnswerRecieved(false)
+                                                  b_AnswerReceived(false)
 {
     MRH_ModuleLogger::Singleton().Log("LaunchPackage", "Sending launch request: [ " +
                                                        s_PackagePath +
@@ -104,7 +104,7 @@ LaunchPackage::~LaunchPackage() noexcept
 void LaunchPackage::HandleEvent(const MRH_Event* p_Event) noexcept
 {
     // @NOTE: CanHandleEvent() allows skipping event type check!
-    b_AnswerRecieved = true;
+    b_AnswerReceived = true;
     
     MRH_EvD_A_LaunchSOA_S c_Launch;
     
@@ -134,7 +134,7 @@ void LaunchPackage::HandleEvent(const MRH_Event* p_Event) noexcept
 
 MRH_Module::Result LaunchPackage::Update()
 {
-    if (b_AnswerRecieved == true || c_Timer.GetTimerFinished() == true)
+    if (b_AnswerReceived == true || c_Timer.GetTimerFinished() == true)
     {
         return MRH_Module::FINISHED_POP;
     }

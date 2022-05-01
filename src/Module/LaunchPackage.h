@@ -49,7 +49,7 @@ public:
     
     LaunchPackage(std::string const& s_PackagePath,
                   std::string const& s_LaunchInput,
-                  MRH_Sint32 s32_LaunchCOmmandID,
+                  MRH_Sint32 s32_LaunchCommandID,
                   bool& b_LaunchSet);
     
     /**
@@ -63,9 +63,9 @@ public:
     //*************************************************************************************
     
     /**
-     *  Hand a recieved event to the module.
+     *  Hand a received event to the module.
      *
-     *  \param p_Event The recieved event.
+     *  \param p_Event The received event.
      */
     
     void HandleEvent(const MRH_Event* p_Event) noexcept override;
@@ -113,7 +113,7 @@ private:
     MRH_Sint32 s32_LaunchCommandID;
     
     bool& b_LaunchSet;
-    bool b_AnswerRecieved;
+    bool b_AnswerReceived;
     
 protected:
     

@@ -42,8 +42,6 @@ public:
      *  String constructor.
      *
      *  \param s_Output The string to perform as speech output.
-     *  \param u32_TimeoutMS The time in milliseconds to wait until output is performed.
-     *  \param u32_OutputID The output ID to use.
      */
     
     SpeechOutput(std::string s_Output);
@@ -59,9 +57,9 @@ public:
     //*************************************************************************************
     
     /**
-     *  Hand a recieved event to the module.
+     *  Hand a received event to the module.
      *
-     *  \param p_Event The recieved event.
+     *  \param p_Event The received event.
      */
     
     void HandleEvent(const MRH_Event* p_Event) noexcept override;
@@ -105,7 +103,7 @@ private:
     MRH_ModuleTimer c_Timer;
     
     MRH_Uint32 u32_SentOutputID;
-    MRH_Uint32 u32_RecievedOutputID;
+    MRH_Uint32 u32_ReceivedOutputID;
     
 protected:
     
