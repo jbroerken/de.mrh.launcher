@@ -55,7 +55,7 @@ extern "C"
     int MRH_Init(const char* p_LaunchInput, int i_LaunchCommandID)
     {
         MRH_ModuleLogger& c_Logger = MRH_ModuleLogger::Singleton();
-        c_Logger.Log("MRH_Init", "Initializing mirror speech application (Version: " +
+        c_Logger.Log("MRH_Init", "Initializing launcher application (Version: " +
                                  std::string(REVISION_STRING) +
                                  ")",
                      "Main.cpp", __LINE__);
